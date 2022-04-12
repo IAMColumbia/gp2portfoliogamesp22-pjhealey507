@@ -1,1 +1,21 @@
 Release Notes version 2 Vertical Slice
+
+How did you mange dependencies and state in your game?
+Currently most of my objects don't have dependencies 
+
+What Systems/Patterns are used?
+The command pattern is used to keep track of the player's actions 
+and give that information to the clones to replicate.
+
+What still doesn't work, what could work better?
+The level reset on clone spawn still needs more work, namely the 
+level elements (doors, moving platforms) need to reset as well.
+
+Does your structure limit your game?
+I haven't run into a problem with my structure yet, so 
+hopefully not.
+
+How did certain patterns change your structure?
+The command pattern makes the main mechanic possible, I have 
+also structured the game to allow for object pooling in the 
+future.

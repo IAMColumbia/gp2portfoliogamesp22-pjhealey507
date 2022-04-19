@@ -1,5 +1,10 @@
 Release Notes version 2 Vertical Slice
 
+The vertical slice adds level elements such as a goal point, 
+buttons, moving platforms, and doors. There is also a 
+mechanism for changing levels, restarting the level, and 
+spawning clones on a timer.
+
 How did you mange dependencies and state in your game?
 Currently most of my objects don't have dependencies 
 
@@ -16,6 +21,6 @@ I haven't run into a problem with my structure yet, so
 hopefully not.
 
 How did certain patterns change your structure?
-The command pattern makes the main mechanic possible, I have 
-also structured the game to allow for object pooling in the 
-future.
+The command pattern makes the main mechanic possible, I also 
+have been keeping the possibility of object pooling in mind
+while making the structure.

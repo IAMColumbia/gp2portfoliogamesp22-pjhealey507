@@ -1,1 +1,8 @@
 Release Notes version 3 Final
+
+The MVP version of the game adds 10 levels, background music,
+a title, and some tutorial text. The game is started in the Main 
+Menu scene, then progresses through each level until level 10
+is completed, at which point it will move to the Win scene. 
+Future features I would like to add include a pause menu, level
+select screen, and improved art/fonts.

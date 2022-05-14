@@ -1,1 +1,62 @@
 Release Notes version 3 Final
+
+
+Standard
+Game Name: Run It Back
+
+Game Description Short: Work with clones of your past self to 
+reach the exit.
+
+Game Description Long: Work with clones of your past self to 
+reach the exit. Clones will copy your actions and play them on
+repeat, allowing you to perform several tasks at the same time.
+
+Credits: Credit to Ariana Cruz for the title.
+
+Genre: Puzzle
+
+
+Developer Log
+Design Decisions:
+	Timer: The timer limits the player to only a few actions
+	per clone. This made sure the player was thinking about 
+	what each clone could do and forced them to use more 
+	clones. It also allowed me to adjust the difficulty of 
+	a level without changing the geometry.
+	
+	Clone Limit: I was considering adding a clone limit to 
+	each level, but I decided to omit it because half the 
+	fun is trying to make sense of the level with 8+ clones
+	all moving at the same time.
+
+	Interactive: When deciding to use buttons for the game,
+	I decided that when you step off the button is just 
+	as important as when you step on. This is why there are
+	some levels that doors that move in the way and moving
+	platforms that open up closed areas.
+
+Technical Debt: Most of my technical debt was related to 
+separation of concern. The Level.cs script had a lot of 
+functionality beyond 'level stuff' such as clone spawns and 
+timers. If I were to refactor it I would separate some 
+functionality into a clone manager or spawn manager.
+
+
+Postmortem
+The command pattern was crucial in the main mechanic of the game.
+I also used a few singletons.
+The most challenging part of the development was making clones 
+spawn in over time without taking too long and also not 
+interfering with other clones. I ended up making a list of clones
+to spawn and making a timer to control the interval at which they
+spawn.
+I would say the code isn't particularly reusable. Probably 50% 
+is specific to Unity, but a fair amount could be used in other
+Unity games.
+My main focus was making the code maintainable. The design 
+itself makes the game easy to expand just by adding levels and 
+maybe a few new interactive elements. Adding levels takes at most
+ten minutes and adjusting difficulty is very easy as well.
+I would say the game is in a complete state, if I were to 
+continue working on it I would add sound effects, more 
+interesting art, and improved UI. And more levels of course.
